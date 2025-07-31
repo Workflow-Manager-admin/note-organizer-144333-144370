@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #1976d2;
+  --color-accent: #ff9800;
+  --color-secondary: #424242;
+  --sidebar-width: 260px;
+  --topbar-height: 50px;
+  --bg-main: #fafbfc;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Avenir, Arial, Helvetica, sans-serif;
+  background: var(--bg-main);
+  color: var(--color-secondary);
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
