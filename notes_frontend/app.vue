@@ -85,15 +85,6 @@ function deleteNote(id: string) {
 </script>
 
 <style scoped>
-:root {
-  --color-primary: #1976d2;
-  --color-secondary: #424242;
-  --color-accent: #ff9800;
-  --sidebar-width: 260px;
-  --topbar-height: 50px;
-  --bg-main: #fafbfc;
-}
-
 .app-root {
   min-height: 100vh;
   background: var(--bg-main);
@@ -105,6 +96,7 @@ function deleteNote(id: string) {
   display: flex;
   flex: 1 1 auto;
   min-height: 0;
+  background: #f7fafd;
 }
 
 .main-area {
@@ -114,16 +106,48 @@ function deleteNote(id: string) {
   flex-direction: column;
   min-width: 0;
   background: #fff;
+  box-shadow: 0 2px 10px 0 rgba(25, 118, 210, 0.03), 0 1.5px 3px 0 rgba(66,66,66,.04);
+  border-radius: var(--border-radius);
+  margin: 1.5rem 1.8rem 1.8rem 0.6rem;
+  box-sizing: border-box;
+  transition: margin 0.23s;
 }
 
 .empty-state {
-  padding: 2rem;
+  padding: 2.5rem 1.1rem;
   color: var(--color-secondary);
+  background: #f6f7fa;
+  border-radius: var(--border-radius);
   text-align: center;
   font-size: 1.15rem;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 0.01em;
+  box-shadow: 0 1.5px 5px 0 rgba(66,66,66,.03);
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+    background: var(--bg-main);
+  }
+  .main-area {
+    margin: 0.6rem 0.2rem;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .main-area {
+    margin: 0.2rem 0;
+    border-radius: 0;
+    min-width: 0;
+    box-shadow: none;
+  }
 }
 </style>
